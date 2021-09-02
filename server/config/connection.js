@@ -1,13 +1,22 @@
-const mongoose = require('mongoose');
+const express = require("express");
+const app = express();
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
 
-mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost/programming-thoughts',
-  {
+dotenv.config();
+
+mongoose
+  .connect(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
     useCreateIndex: true,
     useFindAndModify: false,
-  }
-);
+  })
+  .then(() => console.log("YSSS"))
+  .catch((err) => console.log(err));
+
+app.listen(3000, () => {
+  console.log("YESS");
+});
 
 module.exports = mongoose.connection;

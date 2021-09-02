@@ -8,7 +8,7 @@ import { QUERY_THOUGHTS } from '../utils/queries';
 
 const Home = () => {
   const { loading, data } = useQuery(QUERY_THOUGHTS);
-  const thoughts = data?.thoughts || [];
+  const requestapps = data?.requestapps || [];
 
   return (
     <main>
@@ -24,7 +24,7 @@ const Home = () => {
             <div>Loading...</div>
           ) : (
             <ThoughtList
-              thoughts={thoughts}
+            requestapps={requestapps}
               title="Some Feed for Thought(s)..."
             />
           )}

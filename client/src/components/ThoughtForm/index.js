@@ -8,18 +8,18 @@ import { QUERY_THOUGHTS, QUERY_ME } from '../../utils/queries';
 import Auth from '../../utils/auth';
 
 const ThoughtForm = () => {
-  const [thoughtText, setThoughtText] = useState('');
+  const [patientText, setpatientText] = useState('');
 
   const [characterCount, setCharacterCount] = useState(0);
 
-  const [addThought, { error }] = useMutation(ADD_THOUGHT, {
-    update(cache, { data: { addThought } }) {
+  const [addRequestapp, { error }] = useMutation(ADD_THOUGHT, {
+    update(cache, { data: { addRequestapp } }) {
       try {
-        const { thoughts } = cache.readQuery({ query: QUERY_THOUGHTS });
+        const { requestapps } = cache.readQuery({ query: QUERY_THOUGHTS });
 
         cache.writeQuery({
           query: QUERY_THOUGHTS,
-          data: { thoughts: [addThought, ...thoughts] },
+          data: { requestapps: [addRequestapp, ...requestapps] },
         });
       } catch (e) {
         console.error(e);
@@ -29,7 +29,7 @@ const ThoughtForm = () => {
       const { me } = cache.readQuery({ query: QUERY_ME });
       cache.writeQuery({
         query: QUERY_ME,
-        data: { me: { ...me, thoughts: [...me.thoughts, addThought] } },
+        data: { me: { ...me, requestapps: [...me.requestapps, addRequestapp] } },
       });
     },
   });
@@ -38,14 +38,14 @@ const ThoughtForm = () => {
     event.preventDefault();
 
     try {
-      const { data } = await addThought({
+      const { data } = await addRequestapp({
         variables: {
-          thoughtText,
-          thoughtAuthor: Auth.getProfile().data.username,
+          patientText,
+          patientName: Auth.getProfile().data.username,
         },
       });
 
-      setThoughtText('');
+      setpatientText('');
     } catch (err) {
       console.error(err);
     }
@@ -54,8 +54,8 @@ const ThoughtForm = () => {
   const handleChange = (event) => {
     const { name, value } = event.target;
 
-    if (name === 'thoughtText' && value.length <= 280) {
-      setThoughtText(value);
+    if (name === 'patientText' && value.length <= 280) {
+      setpatientText(value);
       setCharacterCount(value.length);
     }
   };
@@ -79,9 +79,9 @@ const ThoughtForm = () => {
           >
             <div className="col-12 col-lg-9">
               <textarea
-                name="thoughtText"
+                name="patientText"
                 placeholder="Here's a new thought..."
-                value={thoughtText}
+                value={patientText}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
                 onChange={handleChange}

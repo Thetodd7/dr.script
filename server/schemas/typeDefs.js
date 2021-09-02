@@ -12,7 +12,7 @@ type Requestapp {
      _id: ID
      patientText: String
      patientName: String
-     createAt: String
+     createdAt: String
      comments: [Comment]!
  }
 

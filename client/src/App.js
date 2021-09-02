@@ -62,7 +62,7 @@ function App() {
             <Route exact path="/profiles/:username">
               <Profile />
             </Route>
-            <Route exact path="/thoughts/:thoughtId">
+            <Route exact path="/requestapp/:requestappId">
               <SingleThought />
             </Route>
           </div>

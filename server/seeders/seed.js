@@ -12,7 +12,7 @@ db.once('open', async () => {
 
     for (let i = 0; i < RequestappSeeds.length; i++) {
       const { _id, patientName } = await Requestapp.create(RequestappSeeds[i]);
-      const User = await User.findOneAndUpdate(
+        const user = await User.findOneAndUpdate(
         { username: patientName },
         {
           $addToSet: {

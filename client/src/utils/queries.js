@@ -6,9 +6,9 @@ export const QUERY_USER = gql`
       _id
       username
       email
-      thoughts {
+      requestapps {
         _id
-        thoughtText
+        patientText
         createdAt
       }
     }
@@ -16,22 +16,22 @@ export const QUERY_USER = gql`
 `;
 
 export const QUERY_THOUGHTS = gql`
-  query getThoughts {
-    thoughts {
+  query getrequestapps {
+    requestapps {
       _id
-      thoughtText
-      thoughtAuthor
+      patientText
+      patientName
       createdAt
     }
   }
 `;
 
 export const QUERY_SINGLE_THOUGHT = gql`
-  query getSingleThought($thoughtId: ID!) {
-    thought(thoughtId: $thoughtId) {
+  query getSingleThought($requestappId: ID!) {
+    requestapp(requestappId: $requestappId) {
       _id
-      thoughtText
-      thoughtAuthor
+      patientText
+      patientName
       createdAt
       comments {
         _id
@@ -49,10 +49,10 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      thoughts {
+      requestapps {
         _id
-        thoughtText
-        thoughtAuthor
+        patientText
+        patientName
         createdAt
       }
     }

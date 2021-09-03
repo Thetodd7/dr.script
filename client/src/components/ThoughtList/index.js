@@ -25,13 +25,13 @@ const ThoughtList = ({
                 >
                   {requestapp.patientName} <br />
                   <span style={{ fontSize: '1rem' }}>
-                    had this thought on {requestapp.createdAt}
+                    sent this on {requestapp.createdAt}
                   </span>
                 </Link>
               ) : (
                 <>
                   <span style={{ fontSize: '1rem' }}>
-                    You had this thought on {requestapp.createdAt}
+                    You sent this on {requestapp.createdAt}
                   </span>
                 </>
               )}
@@ -41,9 +41,9 @@ const ThoughtList = ({
             </div>
             <Link
               className="btn btn-primary btn-block btn-squared"
-              to={`/thoughts/${requestapp._id}`}
+              to={`/requestapps/${requestapp._id}`}
             >
-              Join the discussion on this thought.
+              Review
             </Link>
           </div>
         ))}

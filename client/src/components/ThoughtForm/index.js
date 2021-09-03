@@ -35,7 +35,7 @@ const ThoughtForm = () => {
   });
 
   const handleFormSubmit = async (event) => {
-    event.preventDefault();
+    
 
     try {
       const { data } = await addRequestapp({
@@ -62,7 +62,7 @@ const ThoughtForm = () => {
 
   return (
     <div>
-      <h3>What's on your techy mind?</h3>
+      <h3> Schedule Appointment </h3>
 
       {Auth.loggedIn() ? (
         <>
@@ -80,7 +80,7 @@ const ThoughtForm = () => {
             <div className="col-12 col-lg-9">
               <textarea
                 name="patientText"
-                placeholder="Here's a new thought..."
+                placeholder="Describe your Symptoms..."
                 value={patientText}
                 className="form-input w-100"
                 style={{ lineHeight: '1.5', resize: 'vertical' }}
@@ -90,7 +90,7 @@ const ThoughtForm = () => {
 
             <div className="col-12 col-lg-3">
               <button className="btn btn-primary btn-block py-3" type="submit">
-                Add Thought
+               Submit
               </button>
             </div>
             {error && (
@@ -102,7 +102,7 @@ const ThoughtForm = () => {
         </>
       ) : (
         <p>
-          You need to be logged in to share your thoughts. Please{' '}
+           Please{' '}
           <Link to="/login">login</Link> or <Link to="/signup">signup.</Link>
         </p>
       )}

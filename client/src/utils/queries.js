@@ -49,10 +49,10 @@ export const QUERY_ME = gql`
       _id
       username
       email
-      requestapps {
+      thoughts {
         _id
-        patientText
-        patientName
+        thoughtText
+        thoughtAuthor
         createdAt
       }
     }

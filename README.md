@@ -1,11 +1,3 @@
-<p align="center">
- 
-  Dr.Script
- 
-  
-</p>
-
-
    ![Screen Shot 2021-09-03 at 10 36 13 AM](https://user-images.githubusercontent.com/85806673/132023140-6993a409-b0fc-49d5-aaef-d9994e489685.jpg)
 
   <h3 align="center"> Dr.Script - Full-Stack Application </h3>
@@ -69,7 +61,7 @@ Deployed app:
 Just download the app and add your medical creditionls. 
 
 ## Heroku
-[Deployed App]()
+[Deployed App]
 
 ## GitHub
 

@@ -25,7 +25,7 @@ const Home = () => {
           ) : (
             <ThoughtList
             requestapps={requestapps}
-              title="Some Feed for Thought(s)..."
+              title="We will get back to you ASAP !"
             />
           )}
         </div>

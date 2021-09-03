@@ -1,5 +1,17 @@
-
-
+<p align="center">
+  <a href="https://github.com/shannonjburris/Clean_water_project/graphs/contributors" alt="Contributors">
+    <img src="https://img.shields.io/badge/Contributors-4-green" />
+  </a>
+  <a href="https://github.com/shannonjburris/Clean_water_project/issues" alt="Contributors">
+    <img src="https://img.shields.io/github/issues/shannonjburris/Clean_water_project" />
+  </a>
+  <a href="https://www.mit.edu/~amini/LICENSE.md" alt="Contributors">
+    <img src="https://img.shields.io/github/license/shannonjburris/Clean_water_project" />
+  </a>
+  <a href="https://github.com/shannonjburris/Clean_water_project" alt="Contributors">
+    <img src="https://img.shields.io/github/forks/shannonjburris/Clean_water_project" />
+  </a>
+</p>
 
 
    ![Screen Shot 2021-09-03 at 10 36 13 AM](https://user-images.githubusercontent.com/85806673/132023140-6993a409-b0fc-49d5-aaef-d9994e489685.jpg)

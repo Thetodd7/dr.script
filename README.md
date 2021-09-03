@@ -63,7 +63,7 @@ Deployed app:
 * [API](https://open.fda.gov/apis/drug/)
 
 ## Usage
-Just download the app add your medical creditionls. 
+Just download the app and add your medical creditionls. 
 
 ## Heroku
 [Deployed App]()

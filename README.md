@@ -47,7 +47,6 @@ Deployed app:
 
 ### Built With
 
-* [![made-with-javascript](https://img.shields.io/badge/Made%20with-JavaScript-1f425f.svg)](https://www.javascript.com)
 * [bcrypt](https://www.npmjs.com/package/bcryptjs)
 * [express](https://expressjs.com)
 * [apollo-server](https://www.npmjs.com/package/express-session)
